@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello HomeController!{% endblock %}
+{% block title %}Sonia Carmon{% endblock %}
 
 {% block body %}
 
@@ -12,7 +12,13 @@
                 <div class="right-line"></div>
             </div>
             <h2 class="title-second">Développeuse Web, Spécialisation Symfony</h2>
-            <p class="text-princ">Bonjour blabla je suis Sonia Carmon, j'ai 26 ans. Je suis Développeuse Web Spécialisée en Symfony. J'aime les manga et la pâtisserie, si vous voulez en apprendre plus Scroll ou navigue !</p>
+            <p class="text-princ">Titulaire d'un master en gestion de l’environnement, mais ne me sentant pas épanouie, je souhaitais me reconvertir dans un métier qui me correspond plus. J’ai donc commencé une <a class="ctw" href="{{ path('form') }}">formation</a> intensive de développement web de 6 mois chez 
+            {# <a class="ctw" target="_blank" href="{{ path('prog') }}"> #}
+            <a class="ctw" target="_blank" href="https://oclock.io/formations/developpeur-web#programme">
+            O’Clock</a> que je termine le 18 Mai 2021. </p>
+            <p class="text-princ">Durant cette formation j’ai <a target="_blank" href="{{ path('compt') }}" class="ctw">beaucoup appris</a>, aussi bien en front (CSS, JS Vanilla, Responsive web design…) qu’en back (PHP 7, Symfony 5, architecture MVC, API Rest, Base de données…). J’ai choisi de me spécialiser en Symfony car, j’ai tout de suite senti une préférence pour PHP et son architecture. Pendant la formation, j’ai pu travailler en autonomie, mais aussi en pair-programming sur divers projets. </p>
+            <p class="text-princ">En plus de mes <a class="ctw" href="{{ path('exp') }}">expériences</a> passées, j’ai débuté un <a class="ctw" href="{{ path('projects') }}">projet</a> de fin de formation d’un mois dans une équipe constituée de 5 personnes.  </p>
+            <p class="text-princ">Si vous voulez en apprendre plus sur moi, <a target="_blank" href="{{ path('cv') }}" class="ctw">téléchargez mon CV</a>, naviguez ou, <a class="ctw" href="{{ path('contact') }}">contactez-moi !</a></p>
         </div>
 
         <div class="right-side">

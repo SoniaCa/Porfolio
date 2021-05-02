@@ -16,6 +16,14 @@ header {
     background-color: white;
 }
 
+.nav-link.active {
+    color : #3ca11d !important;
+}
+
+.nav-link:hover {
+    color : #3ca11d !important;
+}
+
 .navbar-nav {
     /* text-align: center; */
 }
@@ -26,7 +34,6 @@ main {
     padding: 20px;
     margin-top: 15px;
 }
-
 
 
 
@@ -120,78 +127,87 @@ footer {
     position: relative;
     top: 50%;
     transform: perspective(1px) translateY(-50%);
+    color : #3ca11d;
 }
 
 
+
+.ctw {
+    text-decoration: underline;
+}
+
+.ctw:hover { 
+    color : #3ca11d;
+} 
 
 .timeline-container {
-width: 80%;
-padding: 50px 0;
-margin: 50px auto;
-position: relative;
-overflow: hidden;
+    width: 80%;
+    padding: 50px 0;
+    margin: 50px auto;
+    position: relative;
+    overflow: hidden;
 }
 .timeline-container:before { /*This is the line down the middle*/
-content: '';
-position: absolute;
-top: 0;
-left: 50%;
-margin-left: -1px;
-width: 2px;
-height: 100%;
-background: #CCD1D9;
-z-index: 1
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin-left: -1px;
+    width: 2px;
+    height: 100%;
+    background: rgb(133, 133, 133);
+    z-index: 1
 }
 .timeline-block {
-width: -webkit-calc(50% + 8px);
-width: -moz-calc(50% + 8px);
-width: calc(50% + 8px);
-display: -webkit-box;
-display: -webkit-flex;
-display: -moz-box;
-display: flex;
--webkit-box-pack: justify;
--webkit-justify-content: space-between;
--moz-box-pack: justify;
-justify-content: space-between;
-clear: both;
+    width: -webkit-calc(50% + 8px);
+    width: -moz-calc(50% + 8px);
+    width: calc(50% + 8px);
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -moz-box-pack: justify;
+    justify-content: space-between;
+    clear: both;
 }
 .timeline-block-right {
-float: right;
+    float: right;
 }
 .timeline-block-left {
-float: left;
-direction: rtl
+    float: left;
+    direction: rtl
 }
 .marker {
-width: 16px;
-height: 16px;
-border-radius: 50%;
-border: 2px solid #F5F7FA;
-background: black;
-margin-top: 10px;
-z-index: 9999
+    width: 16px;
+    height: 16px;
+    border: solid 2px white;
+    border-radius: 50%;
+    background: black;
+    margin-top: 10px;
+    z-index: 9999
 }
 .timeline-content {
-width: 95%;
-padding: 0 15px;
-color: #666
+    width: 95%;
+    padding: 0 15px;
+    color: rgb(119, 118, 118);
 }
 .timeline-content h3 {
-margin-top: 5px;
-margin-bottom: 5px;
-font-size: 25px;
-font-weight: 500
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 20px;
+    font-weight: 500
 }
 .timeline-content span {
-font-size: 15px;
-color: #a4a4a4;
+    font-size: 15px;
+    color: #a4a4a4;
 }
 .timeline-content p {
-font-size: 14px;
-line-height: 1.5em;
-word-spacing: 1px;
-color: #888;
+    font-size: 14px;
+    line-height: 1.5em;
+    word-spacing: 1px;
+    color: rgb(87, 84, 84);
 }
 
 @media screen and (max-width: 768px) {
