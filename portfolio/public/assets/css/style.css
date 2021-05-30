@@ -60,7 +60,7 @@ main {
 .title-princ {
     /* white-space: nowrap; */
     text-align: center;
-    margin: 0 20px; 
+    margin: 20px 20px; 
 }
 
 
@@ -89,10 +89,8 @@ main {
     background-size: 100%;
 }
 
-.circle--skill {
-    background: no-repeat url("../img/setup.jpg");
-    background-size: 140%;
-}
+
+
 
 .circle {
     width: 200px;
@@ -103,17 +101,43 @@ main {
     border: 2px solid black;
 }
 
+.circle--contact {
+    border : none;
+}
+
+
+
+
 .rect {
-    width: 150px;
-    height: 100%;
+    width: 180px;
+    height: 300px;
     margin: 0 auto;
     border-radius: 10px;
     background-position: center;
     border: 2px solid black;
-    background: no-repeat url("../img/code.png");
+    background: no-repeat url("../img/exp.png");
     background-size: 140%;
 }
 
+.rect--projects {
+    background: no-repeat url("../img/projets.svg");
+    background-position: center;
+}
+
+.rect-form {
+    background: no-repeat url("../img/formation.svg");
+    background-position: center;
+    background-size: cover ;
+}
+
+.rect-comp {
+    background-image: none;
+}
+
+.logo-comp {
+    max-height: 100%;
+    max-width: 100%;
+}
 
 
 footer {
@@ -268,7 +292,7 @@ footer {
         height: 90%;
         position: absolute;
         top: 50px; /* poussé de la moitié de hauteur du référent */
-        left : 20%;
+        left : 25%;
         margin : 0 auto;
     }
 
@@ -297,6 +321,13 @@ footer {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+        height: 470px;
     }
+
+    /* .rect-comp {
+        height: 500px;
+        position: absolute;
+        top: -100px; 
+    } */
 
 } 
