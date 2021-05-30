@@ -35,22 +35,22 @@
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link {{ 'home' in app.request.get('_route')  ? ' active' }}" aria-current="page" href="{{ path('home') }}">Home</a>
+                            <a class="nav-link" aria-current="page" href="">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link {{ 'compt' in app.request.get('_route')  ? ' active' }}" href="{{ path('compt') }}">Compétences</a>
+                            <a class="nav-link" href="#competences">Compétences</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link {{ 'form' in app.request.get('_route')  ? ' active' }}" href="{{ path('form') }}">Formation</a>
+                            <a class="nav-link" href="#formation">Formation</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link {{ 'exp' in app.request.get('_route')  ? ' active' }}" href="{{ path('exp') }}">Expériences</a>
+                            <a class="nav-link" href="#experiences">Expériences</a>
                         </li>
                          <li class="nav-item">
-                            <a class="nav-link {{ 'projects' in app.request.get('_route')  ? ' active' }}" href="{{ path('projects') }}">Projets</a>
+                            <a class="nav-link" href="#projets">Projets</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link {{ 'contact' in app.request.get('_route')  ? ' active' }}" href="{{ path('contact') }}">Contact</a>
+                            <a class="nav-link" href="#contact">Contact</a>
                         </li>
                         </ul>
                     </div>
@@ -62,10 +62,11 @@
         {% block body %}{% endblock %}
 
         <footer>
-            <p class="p--footer"><a class="ctw text-decoration-none" href="{{ path('home') }}">Sonia Carmon</a> - <a class="ctw text-decoration-none" href="{{ path('contact') }}">Contact</a></p>
+            <p class="p--footer"><a class="ctw text-decoration-none" href="">Sonia Carmon</a></p>
         </footer>
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
-        
+        <script src="https://kit.fontawesome.com/d409dd8456.js" crossorigin="anonymous"></script>
+
     </body>
 </html>

@@ -14,6 +14,11 @@ header {
 .navbar {
     padding : 0 10px;
     background-color: white;
+    border : #43494e solid 0.8px;
+}
+
+.nav-link {
+    color : #2C3136 !important;
 }
 
 .nav-link.active {
@@ -35,6 +40,14 @@ main {
     margin-top: 15px;
 }
 
+.part {
+    margin-bottom: 100px;
+}
+
+
+.links {
+    margin-top: 40px;
+}
 
 
 .left-line{
@@ -47,7 +60,7 @@ main {
 .title-princ {
     /* white-space: nowrap; */
     text-align: center;
-    margin: 0 20px; 
+    margin: 20px 20px; 
 }
 
 
@@ -76,10 +89,8 @@ main {
     background-size: 100%;
 }
 
-.circle--skill {
-    background: no-repeat url("../img/setup.jpg");
-    background-size: 140%;
-}
+
+
 
 .circle {
     width: 200px;
@@ -90,27 +101,42 @@ main {
     border: 2px solid black;
 }
 
-.rect {
-    width: 150px;
-    height: 200px;
-    margin: 0 auto;
-    border-radius: 10px;
-    background-position: center;
-    border: 2px solid black;
-    background: no-repeat url("../img/code.png");
-    background-size: 140%;
+.circle--contact {
+    border : none;
 }
 
 
-.rect--form {
-    width: 150px;
-    height: 200px;
+
+
+.rect {
+    width: 180px;
+    height: 300px;
     margin: 0 auto;
     border-radius: 10px;
     background-position: center;
     border: 2px solid black;
-    background: no-repeat url("../img/code.png");
+    background: no-repeat url("../img/exp.png");
     background-size: 140%;
+}
+
+.rect--projects {
+    background: no-repeat url("../img/projets.svg");
+    background-position: center;
+}
+
+.rect-form {
+    background: no-repeat url("../img/formation.svg");
+    background-position: center;
+    background-size: cover ;
+}
+
+.rect-comp {
+    background-image: none;
+}
+
+.logo-comp {
+    max-height: 100%;
+    max-width: 100%;
 }
 
 
@@ -234,7 +260,7 @@ footer {
 
 @media (min-width : 768px) {
 
-    main {
+    .part {
        display: flex;
        justify-content: space-between;
     }
@@ -257,31 +283,19 @@ footer {
         height: 220px;
         position: absolute;
         top: 50%; /* poussé de la moitié de hauteur du référent */
-        left : 10%;
+        left : 20%;
         transform: translateY(-50%); /* tiré de la moitié de sa propre hauteur */
         margin : 0 auto;
     }
 
-
     .rect {
-        height: 1500px;
-        margin: 0 auto;
+        height: 90%;
         position: absolute;
-        top: 50%; /* poussé de la moitié de hauteur du référent */
-        left : 10%;
-        transform: translateY(-50%); /* tiré de la moitié de sa propre hauteur */
+        top: 50px; /* poussé de la moitié de hauteur du référent */
+        left : 25%;
+        margin : 0 auto;
     }
 
-
-    .rect--form {
-        height: 700px;
-        margin: 0 auto;
-        position: absolute;
-        top: 50%; /* poussé de la moitié de hauteur du référent */
-        left : 10%;
-        transform: translateY(-50%); /* tiré de la moitié de sa propre hauteur */
-    }
-    
     
 
 } 
@@ -291,41 +305,29 @@ footer {
     main {
         padding : 40px;
     }
-    
-    .circle {
-        width: 270px;
-        height: 270px;
-    }
 
-    .circle--home {
-        margin-top: 10px;
-    }
-
-
-    .rect {
-        width: 200px;
-        height: 1200px;
-        margin: 0 auto;
-        position: absolute;
-        top: 0%; /* poussé de la moitié de hauteur du référent */
-        left : 20%;
-        transform: translateY(0%); /* tiré de la moitié de sa propre hauteur */
-    }
-    
+   
     
 
 } 
 
 @media (min-width : 1440px) {
 
-    
-    .circle {
-        width: 370px;
-        height: 370px;
+    .title-second {
+        text-align: left;
     }
-    
-    .circle--home {
-        margin-top: 70px;
+
+    .block-comp {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        height: 470px;
     }
+
+    /* .rect-comp {
+        height: 500px;
+        position: absolute;
+        top: -100px; 
+    } */
 
 } 
