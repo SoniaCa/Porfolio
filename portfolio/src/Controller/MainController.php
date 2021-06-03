@@ -28,6 +28,20 @@ class MainController extends AbstractController
             $em = $this->getDoctrine()->getManager();
             $em->persist($contact);
             $em->flush();
+
+            // $email=$form['email']->getData();
+            // $name=$form['name']->getData();
+            // $message=$form['message']->getData();
+
+            // $email = (new Email())
+            //     ->from($email) 
+            //     ->to('carmon.sonia@gmail.com')
+            //     ->priority(Email::PRIORITY_HIGH) 
+            //     ->subject('Porfolio message : ' . $name)
+            //     ->text($message) 
+            // ;
+
+            // $mailer->send($email);
  
             $this->addFlash('success', 'Votre message a bien été envoyé !');
             return $this->redirectToRoute('home');

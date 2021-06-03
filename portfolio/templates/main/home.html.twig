@@ -3,6 +3,13 @@
 {% block title %}Sonia Carmon{% endblock %}
 
 {% block body %}
+    {% for type, messages in app.flashes %}
+        {% for message in messages %}
+            <div class="alert alert-{{ type }}" role="alert">
+                {{ message }}
+            </div>
+        {% endfor %}
+    {% endfor %}
 
     <main class="">
         <div class="part" id="intro">
@@ -13,22 +20,21 @@
                     <div class="right-line"></div>
                 </div>
                 <h2 class="title-second">Développeuse Web, Spécialisation Symfony</h2>
-                <p class="text-princ">Titulaire d'un master en gestion de l’environnement, mais ne me sentant pas épanouie, je souhaitais me reconvertir dans un métier qui me correspond plus. J’ai donc commencé une <a class="ctw" href="#formation">formation</a> intensive de développement web de 6 mois chez 
-                {# <a class="ctw" target="_blank" href="{{ path('prog') }}"> #}
-                <a class="ctw" target="_blank" href="https://oclock.io/formations/developpeur-web#programme">
-                O’Clock</a> que je termine le 18 Mai 2021. </p>
-                <p class="text-princ">Durant cette formation j’ai <a href="#competences" class="ctw">beaucoup appris</a>, aussi bien en Front (CSS, JS Vanilla, Responsive web
+                <p class="text-princ">Titulaire d'un master en gestion de l’environnement, mais ne me sentant pas épanouie, je souhaitais me reconvertir dans un métier qui me correspond plus. J’ai donc débuté une <a class="linkp" href="#formation">formation</a> intensive de développement web de 5 mois chez 
+                <a class="linkp" target="_blank" href="https://oclock.io/formations/developpeur-web#programme">
+                O’Clock</a> que j'ai terminé' le 26 Mai 2021. </p>
+                <p class="text-princ">Durant cette formation, j’ai <a href="#competences" class="linkp">beaucoup appris</a>, aussi bien en Front (HTML5, CSS3, JS Vanilla, Responsive web
                 design…) qu’en Back (PHP 7, Symfony 5, architecture MVC, API Rest, Base de données…).
                 J’ai choisi de me spécialiser en Symfony, car j’ai tout de suite senti une préférence pour PHP et son
                 architecture. Pendant la formation, j’ai pu travailler en autonomie, mais aussi en pair-programming
                 sur divers projets.</p>
-                <p class="text-princ">En plus de mes <a class="ctw" href="#experiences">expériences</a> passées, j’ai réalisé un <a class="ctw" href="#projets">projet</a> de fin de formation d’un mois dans une équipe constituée de 5 personnes.  </p>
-                <p class="text-princ">Si vous voulez en apprendre plus sur moi, <a target="_blank" href="{{ path('cv') }}" class="ctw">téléchargez mon CV</a>, naviguez ou, <a class="ctw" href="#contact">contactez-moi !</a></p>
+                <p class="text-princ">En plus de mes <a class="linkp" href="#experiences">expériences</a> passées, j’ai réalisé un <a class="linkp" href="#projets">projet</a> de fin de formation d’un mois dans une équipe constituée de 5 personnes. </p>
+                <p class="text-princ">Si vous voulez en apprendre plus sur moi, <a target="_blank" href="{{ path('cv') }}" class="linkp">téléchargez mon CV</a>, naviguez ou, <a class="linkp" href="#contact">contactez-moi !</a></p>
 
                 <div class="links d-flex justify-content-center">
-                    <a target="_blank" href="https://www.linkedin.com/in/soniacarmon/"><i class="fa fa-linkedin-square" aria-hidden="true"></i> LinkedIn</a>
-                    <a target="_blank" class="mr-5 ml-5" href="https://github.com/SoniaCa"><i class="fa fa-github" aria-hidden="true"></i> GitHub</a>
-                    <a id="competences" href="mailto:carmon.sonia@gmail.com"><i class="fa fa-envelope" aria-hidden="true"></i> Email</a>
+                    <a target="_blank" class="linkp" href="https://www.linkedin.com/in/soniacarmon/"><i class="fa fa-linkedin-square" aria-hidden="true"></i> LinkedIn</a>
+                    <a target="_blank" class="linkp mr-5 ml-5" href="https://github.com/SoniaCa"><i class="fa fa-github" aria-hidden="true"></i> GitHub</a>
+                    <a id="competences" href="mailto:carmon.sonia@gmail.com" class="linkp"><i class="fa fa-envelope" aria-hidden="true"></i> Email</a>
                 </div>
             </div>
 
@@ -53,12 +59,12 @@
                         <h2 class="title-second">Back</h2>
                         <p class="text-princ">
                         <ul>
-                            <li class="mt-3"> <img class="logo-comp m-1" src="{{ asset('assets/img/php.png') }}" width="40" alt=""> PHP 7 et POO</li>
-                            <li class="mt-3"><img class="logo-comp m-1" src="{{ asset('assets/img/symfony.svg') }}" width="30" alt=""> Symphony 5</li>
-                            <li class="mt-3"><img class="logo-comp m-1" src="{{ asset('assets/img/database.png') }}" width="30" alt=""> Base données, SQL (Maria DB)</li>
-                            <li class="mt-3"><img class="logo-comp m-1" src="{{ asset('assets/img/crud.png') }}" width="50" alt=""> Architecture MVC, CRUD et BREAD</li>
-                            <li class="mt-3"><img class="logo-comp m-1" src="{{ asset('assets/img/api.png') }}" width="50" alt=""> API Rest</li>
-                            <li class="mt-3"><img class="logo-comp m-1" src="{{ asset('assets/img/lumen.svg') }}" width="20" alt=""> Lumen (micro-framework Laravel)</li>
+                            <li class="mt-3"> <img class="logo-comp m-1" src="{{ asset('assets/img/php.png') }}" width="40" alt="Php"> PHP 7 et POO</li>
+                            <li class="mt-3"><img class="logo-comp m-1" src="{{ asset('assets/img/symfony.svg') }}" width="30" alt="Symgony"> Symphony 5</li>
+                            <li class="mt-3"><img class="logo-comp m-1" src="{{ asset('assets/img/database.png') }}" width="30" alt="BDD"> Base données, SQL (Maria DB)</li>
+                            <li class="mt-3"><img class="logo-comp m-1" src="{{ asset('assets/img/crud.png') }}" width="50" alt="CRUD"> Architecture MVC, CRUD et BREAD</li>
+                            <li class="mt-3"><img class="logo-comp m-1" src="{{ asset('assets/img/api.png') }}" width="50" alt="API"> API Rest</li>
+                            <li class="mt-3"><img class="logo-comp m-1" src="{{ asset('assets/img/lumen.svg') }}" width="20" alt="Lumen"> Lumen (micro-framework Laravel)</li>
                         </ul>           
                         </p>
                     </div>
@@ -67,11 +73,11 @@
                         <h2 class="title-second">Front</h2>
                         <p class="text-princ">
                         <ul>
-                            <li class="mt-3"><img class="logo-comp m-1" src="{{ asset('assets/img/html.png') }}" width="35" alt=""> HTML5</li>
-                            <li class="mt-3"><img class="logo-comp m-1" src="{{ asset('assets/img/css.png') }}" width="35" alt=""> CSS3</li>
-                            <li class="mt-3"><img class="logo-comp m-1" src="{{ asset('assets/img/js.png') }}" width="37" alt=""> JS Vanilla</li>
-                            <li class="mt-3"><img class="logo-comp m-1" src="{{ asset('assets/img/responsive.png') }}" width="40" alt=""> Responsives Web Design</li>
-                            <li class="mt-3"><img class="logo-comp m-1" src="{{ asset('assets/img/bootstrap.png') }}" width="30" alt=""> Bootstrap</li>
+                            <li class="mt-3"><img class="logo-comp m-1" src="{{ asset('assets/img/html.png') }}" width="35" alt="HTML5"> HTML5</li>
+                            <li class="mt-3"><img class="logo-comp m-1" src="{{ asset('assets/img/css.png') }}" width="35" alt="CSS3"> CSS3</li>
+                            <li class="mt-3"><img class="logo-comp m-1" src="{{ asset('assets/img/js.png') }}" width="37" alt="JS"> JS Vanilla</li>
+                            <li class="mt-3"><img class="logo-comp m-1" src="{{ asset('assets/img/responsive.png') }}" width="40" alt="Responsive"> Responsives Web Design</li>
+                            <li class="mt-3"><img class="logo-comp m-1" src="{{ asset('assets/img/bootstrap.png') }}" width="30" alt="Bootstrap"> Bootstrap</li>
                         </ul>
                         </p>
                     </div>
@@ -80,9 +86,9 @@
                         <h2 class="title-second">Autres</h2>
                         <p class="text-princ">
                         <ul>
-                            <li class="mt-3"><img class="logo-comp m-1" src="{{ asset('assets/img/ubuntu.png') }}" width="35" alt=""> Linux et lignes de commandes</li>
-                            <li class="mt-3"><img class="logo-comp m-1" src="{{ asset('assets/img/github.svg') }}" width="30" alt=""> GitHub</li>
-                            <li class="mt-3"><img class="logo-comp m-1" src="{{ asset('assets/img/wordpress.png') }}" width="30" alt=""> Base Wordpress</li>
+                            <li class="mt-3"><img class="logo-comp m-1" src="{{ asset('assets/img/ubuntu.png') }}" width="35" alt="Ubuntu"> Linux et lignes de commandes</li>
+                            <li class="mt-3"><img class="logo-comp m-1" src="{{ asset('assets/img/github.svg') }}" width="30" alt="GitHub"> GitHub</li>
+                            <li class="mt-3"><img class="logo-comp m-1" src="{{ asset('assets/img/wordpress.png') }}" width="30" alt="Wordpress"> Base Wordpress</li>
                             <li class="mt-3"><i style="font-size:25px;" class="fas fa-pencil-alt"></i> Capacités rédactionnelles</li>
                             <li class="mt-3"><i style="font-size:25px;" class="far fa-handshake"></i> Méthode Agile (SCRUM)</li>
                             <li class="mt-3" id="formation"><img class="logo-comp m-1" src="{{ asset('assets/img/anglais.svg.png') }}" width="30" alt=""> Anglais</li>
@@ -107,7 +113,7 @@
             <div class="left-side ">
                 <div class="title d-flex justify-content-between align-items-center">
                     <div class="left-line"></div>
-                    <h1 class="title-princ">Formation</h1>
+                    <h1 class="title-princ">Formations</h1>
                     <div class="right-line"></div>
                 </div>
 
@@ -171,9 +177,9 @@
                     <div class="marker"></div>
                     <div class="timeline-content">
                     <h3>Mai 2021 : Projet de fin d'étude d'un mois : Care The World</h3>
-                    <span>O'Clock </span>  <img src="../assets/img/oclock.png" alt="" width="30" height="30">
+                    <span>O'Clock </span>  <img src="{{ asset('assets/img/oclock.png') }}" alt="oclock" width="30" height="30">
                     <p>Réalisation d’un projet sur le thème de l’environnement, dans une équipe de 5 personnes. Ce site permet à des utilisateurs de créer des événements sur différents thèmes (plantation, nettoyage nature, construction d’abris, sortie pédagogique, potager participatif, etc.) près de chez eux. D’autres utilisateurs pourront chercher des  événements qui les intéressent (selon le lieu ou le thème) et s’y  inscrire ou échanger entre eux. 
-                    Technologie principale utilisée : Symfony.</p>
+                    Technologie principale utilisée : Symfony5.</p>
                     </div>
                 </div>
 
@@ -181,7 +187,8 @@
                     <div class="marker"></div>
                     <div class="timeline-content">
                     <h3>Mars-Aout 2019 : Stage de 6 mois</h3>
-                    <img src="../assets/img/onf.svg.png" alt="" width="50" height="20"> <span>ONF (Office National des Forêts) RDI, Dole</span>
+                    <img src="{{ asset('assets/img/onf.svg.png') }}" alt="ONF" width="50" height="20"> 
+                    <span>ONF (Office National des Forêts) RDI, Dole</span>
                     <p>Evaluation, à l’échelle d’une révolution forestière complète, de l’effet de la préparation mécanisée du sol sur la dynamique de la biomasse aérienne et sur le stockage de carbone dans l’écosystème forestier (projet CAPSOL).</p>
                     <p>Tutrice : Emila AKROUME</p>
                     </div>
@@ -192,7 +199,7 @@
                     <div class="timeline-content">
                     <h3>Avril-Juillet 2018 : Stage de 4 mois</h3>
                     <span>CEF (Centre d'Etude de la Forêt), Montréal</span>
-                    <img src="../assets/img/cef.png" alt="" width="30" height="30">
+                    <img src="{{ asset('assets/img/cef.png') }}" alt="CEF" width="30" height="30">
                     <p>Effets de stress typiques de milieux urbains sur la quantité et la croissance des racines d’arbres urbains.</p>
                     <p>Tuteur : Christian MESSIER</p>
                     </div>
@@ -202,7 +209,7 @@
                     <div class="marker"></div>
                     <div class="timeline-content">
                     <h3>Avril-Juin 2017 : Stage de 8 semaines</h3>
-                    <img src="../assets/img/ecodiv.png" alt="" width="30" height="30">  <span>Laboratoire ECODIV, Rouen</span>
+                    <img src="{{ asset('assets/img/ecodiv.png') }}" alt="ECODIV" width="30" height="30">  <span>Laboratoire ECODIV, Rouen</span>
                     <p>Effet des prélèvements de rémanents forestiers sur l’activité microbienne et sur la biomasse en carbone microbien (Projet RESPIRE).</p>
                     <p id="projets">Tuteur : François ELIE</p>
                     </div>
@@ -211,7 +218,7 @@
             </div>
 
             <div class="right-side">
-                <div class="rect"></div>
+                <div class="rect rect-experiences"></div>
             </div>
         </div>
 
@@ -224,64 +231,64 @@
                 </div>
 
                 <div class="projet pb-5">
-                    <h2 class="title-second">Projet de fin de formation : <a class="ctw" target="_blank" href="http://caretheworld.fr/">Care The World</a></h2>
+                    <h2 class="title-second">Projet de fin de formation : <a class="linkp" target="_blank" href="http://caretheworld.fr/">Care The World</a></h2>
                     <div class="text-center mt-3 mb-3">
-                        <img src="{{ asset('assets/img/ctw.png') }}" width="200" alt="">
+                        <img src="{{ asset('assets/img/ctw.png') }}" width="200" alt="logo-ctw">
                     </div>
                     <p class="text-princ">Réalisation d’un projet sur le thème de l’environnement, dans une équipe de 5 personnes.</p>
                     <p class="text-princ"> 
                     Ce projet permet à des utilisateurs de créer des événements environnementaux sur différents thèmes (plantation, nettoyage nature, construction d’abris, sortie pédagogique, potager participatif, etc.) près de chez eux.</p> 
-                    <p class="text-princ">D’autres utilisateurs pourront chercher des événements qui les intéressent (selon le lieu ou, selon le thème) et s’y inscrire ou échanger entre eux. La technologie principale utilisée pour ce projet est Symfony5.</p>
+                    <p class="text-princ">D’autres utilisateurs pourront chercher des événements qui les intéressent (selon le lieu ou, selon le thème) et s’y inscrire ou échanger entre eux. La technologie principale utilisée pour ce projet est Symfony 5.</p>
 
-                    <p>Si vous voulez voir la démo du projet, elle est présente sur le <a class="ctw" href="https://www.youtube.com/watch?v=mQki_QvYDJ0&t=1440s">Youtube de l'école</a> (à partir de 24min pour une durée d'environ 15min)</p>
+                    <p>Si vous voulez voir la démo du projet, elle est présente sur le <a class="linkp" href="https://www.youtube.com/watch?v=mQki_QvYDJ0&t=1440s">Youtube de l'école</a> (à partir de 24min pour une durée d'environ 15min)</p>
 
                     <div class="text-center mt-3 mb-3">
-                        <img class="mr-2" src="{{ asset('assets/img/symfony.svg') }}" width="30" alt="">
-                        <img class="mr-2" src="{{ asset('assets/img/twig.png') }}" width="30" alt="">
-                        <img class="mr-2" src="{{ asset('assets/img/js.png') }}" width="35" alt="">
-                         <img class="mr-2" src="{{ asset('assets/img/bootstrap.png') }}" width="30" alt="">
+                        <img class="mr-2" src="{{ asset('assets/img/symfony.svg') }}" width="30" alt="Symfony" data-toggle="tooltip" data-placement="bottom" title="Symfony">
+                        <img class="mr-2" src="{{ asset('assets/img/twig.png') }}" width="30" alt="Twig" data-toggle="tooltip" data-placement="bottom" title="Twig">
+                        <img class="mr-2" src="{{ asset('assets/img/js.png') }}" width="35" alt="JS" data-toggle="tooltip" data-placement="bottom" title="Javascript">
+                        <img class="mr-2" src="{{ asset('assets/img/bootstrap.png') }}" width="30" alt="Bootstrap" data-toggle="tooltip" data-placement="bottom" title="Bootstrap">
                     </div>
                 </div>
 
                 <div class="projet mt-5 pb-5">
-                    <h2 class="title-second"><a class="ctw" target="_blank" href="https://github.com/SoniaCa/Portfolio">Portfolio</a></h2>
+                    <h2 class="title-second"><a class="linkp" target="_blank" href="https://github.com/SoniaCa/Portfolio">Portfolio</a></h2>
                     <div class="text-center mt-3 mb-3">
-                        <img class="img-project" src="{{ asset('assets/img/logo.svg') }}" width="250" alt="">
+                        <img class="img-project" src="{{ asset('assets/img/logo.svg') }}" width="250" alt="logo-sonia">
                     </div>
-                    <p class="text-princ">Porfolio sur lequel vous êtes en ce moment ! Réalisé avec Symfony5 </p>
+                    <p class="text-princ">Porfolio sur lequel vous êtes en ce moment ! Réalisé avec Symfony 5 </p>
                     <div class="text-center mt-3 mb-3">
-                        <img class="mr-2" src="{{ asset('assets/img/symfony.svg') }}" width="30" alt="">
-                        <img class="mr-2" src="{{ asset('assets/img/twig.png') }}" width="30" alt="">
-                    </div>
-                </div>
-
-                <div class="projet mt-5 pb-5">
-                    <h2 class="title-second">Pratique du JS : <a class="ctw" target="_blank" href="https://github.com/SoniaCa/Todo-JS">Todolist</a></h2>
-                    <div class="text-center mt-3 mb-3">
-                        <img class="img-project img-large" src="{{ asset('assets/img/todo.png') }}" alt="">
-                    </div>
-                    <p class="text-princ">Todolist en JS réalisée à partir d'un challenge de Frontend Mentor</p>
-                    <div class="text-center mt-3 mb-3">
-                        <img class="mr-2" src="{{ asset('assets/img/js.png') }}" width="40" alt="">
-                        <img class="mr-2" src="{{ asset('assets/img/css.png') }}" width="35" alt="">
+                        <img class="mr-2" src="{{ asset('assets/img/symfony.svg') }}" width="30" alt="Symfony" data-toggle="tooltip" data-placement="bottom" title="Symfony">
+                        <img class="mr-2" src="{{ asset('assets/img/twig.png') }}" width="30" alt="Twig" data-toggle="tooltip" data-placement="bottom" title="Twig">
                     </div>
                 </div>
 
                 <div class="projet mt-5 pb-5">
-                    <h2 class="title-second">Pratique du PHP : <a class="ctw" target="_blank" href="https://github.com/SoniaCa/Profil-Card">Générateur de carte de visite</a></h2>
+                    <h2 class="title-second">Pratique du JS : <a class="linkp" target="_blank" href="https://github.com/SoniaCa/Todo-JS">Todolist</a></h2>
                     <div class="text-center mt-3 mb-3">
-                        <img class="img-project" src="{{ asset('assets/img/carte.png') }}" width="300" alt="">
+                        <img class="img-project img-large" src="{{ asset('assets/img/todo.png') }}" alt="Todolist">
                     </div>
-                    <p class="text-princ">Un générateur de carte de visite réalisé à partir d'un challenge de Frontend Mentor</p>
+                    <p class="text-princ">Todolist en JS réalisée à partir d'un challenge de <a class="linkp" href="https://www.frontendmentor.io/">Frontend Mentor</a></p>
                     <div class="text-center mt-3 mb-3">
-                        <img class="mr-2" src="{{ asset('assets/img/php.png') }}" width="45" alt="">
-                        <img class="mr-2" src="{{ asset('assets/img/css.png') }}" width="35" alt="">
+                        <img class="mr-2" src="{{ asset('assets/img/js.png') }}" width="40" alt="JS" data-toggle="tooltip" data-placement="bottom" title="Javascript">
+                        <img class="mr-2" src="{{ asset('assets/img/css.png') }}" width="35" alt="CSS3" data-toggle="tooltip" data-placement="bottom" title="CSS3">
+                    </div>
+                </div>
+
+                <div class="projet mt-5 pb-5">
+                    <h2 class="title-second">Pratique du PHP : <a class="linkp" target="_blank" href="https://github.com/SoniaCa/Profil-Card">Générateur de carte de visite</a></h2>
+                    <div class="text-center mt-3 mb-3">
+                        <img class="img-project" src="{{ asset('assets/img/carte.png') }}" width="300" alt="card">
+                    </div>
+                    <p class="text-princ">Un générateur de carte de visite réalisé à partir d'un challenge de <a class="linkp" href="https://www.frontendmentor.io/">Frontend Mentor</a></p>
+                    <div class="text-center mt-3 mb-3">
+                        <img class="mr-2" src="{{ asset('assets/img/php.png') }}" width="45" alt="PHP" data-toggle="tooltip" data-placement="bottom" title="PHP">
+                        <img class="mr-2" src="{{ asset('assets/img/css.png') }}" width="35" alt="CSS3" data-toggle="tooltip" data-placement="bottom" title="CSS3">
                     </div>
                 </div>
             </div>
 
             <div class="right-side">
-                <div class="rect rect--projects">
+                <div class="rect rect-projects">
                 
                 </div>
             </div>
@@ -294,14 +301,6 @@
                     <h1 class="title-princ">Contactez-moi !</h1>
                     <div class="right-line"></div>
                 </div>
-
-                {% for type, messages in app.flashes %}
-                    {% for message in messages %}
-                        <div class="alert alert-{{ type }}" role="alert">
-                            {{ message }}
-                        </div>
-                    {% endfor %}
-                {% endfor %}
                 
                 {{ form_start(form) }}
                 {{ form_row(form.name) }}
