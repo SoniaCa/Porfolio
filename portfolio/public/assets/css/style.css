@@ -119,8 +119,13 @@ main {
     background-size: 140%;
 }
 
-.rect--projects {
-    background: no-repeat url("../img/projets.svg");
+.rect-projects {
+    background: no-repeat url("../img/projects.png");
+    background-position: center;
+}
+
+.rect-experiences {
+    background: no-repeat url("../img/experiences.svg");
     background-position: center;
 }
 
@@ -132,6 +137,7 @@ main {
 
 .rect-comp {
     background-image: none;
+    height: 500px;
 }
 
 .logo-comp {
@@ -158,11 +164,11 @@ footer {
 
 
 
-.ctw {
+.linkp {
     text-decoration: underline;
 }
 
-.ctw:hover { 
+.linkp:hover { 
     color : #3ca11d;
 } 
 
