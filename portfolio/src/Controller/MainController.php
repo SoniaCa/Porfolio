@@ -44,7 +44,7 @@ class MainController extends AbstractController
             // $mailer->send($email);
  
             $this->addFlash('success', 'Votre message a bien été envoyé !');
-            return $this->redirectToRoute('home');
+            return $this->redirect('/#home');
         }
  
         return $this->render('main/home.html.twig', [
