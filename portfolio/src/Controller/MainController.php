@@ -59,7 +59,7 @@ class MainController extends AbstractController
     public function cv()
     {
         // send the file contents and force the browser to download it
-        return $this->file('CV.pdf', 'CVSoniaCarmon.pdf', ResponseHeaderBag::DISPOSITION_INLINE);
+        return $this->file('assets/CV.pdf', 'CVSoniaCarmon.pdf', ResponseHeaderBag::DISPOSITION_INLINE);
         //Chemin à partir du dossier public 
             
     }
